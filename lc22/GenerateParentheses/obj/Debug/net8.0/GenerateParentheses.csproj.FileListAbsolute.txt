@@ -1,0 +1,14 @@
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.GeneratedMSBuildEditorConfig.editorconfig
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.AssemblyInfoInputs.cache
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.AssemblyInfo.cs
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.csproj.CoreCompileInputs.cache
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/bin/Debug/net8.0/GenerateParentheses
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/bin/Debug/net8.0/GenerateParentheses.deps.json
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/bin/Debug/net8.0/GenerateParentheses.runtimeconfig.json
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/bin/Debug/net8.0/GenerateParentheses.dll
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/bin/Debug/net8.0/GenerateParentheses.pdb
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.dll
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/refint/GenerateParentheses.dll
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.pdb
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/GenerateParentheses.genruntimeconfig.cache
+/Users/siqiliu/Workspace/Self/csharp/random-practice/lc22/GenerateParentheses/obj/Debug/net8.0/ref/GenerateParentheses.dll
