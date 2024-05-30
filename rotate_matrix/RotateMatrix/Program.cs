@@ -1,4 +1,5 @@
-﻿namespace MainNS
+﻿
+namespace MainNS
 {
     public class RotateMatrix
     {
@@ -81,9 +82,59 @@
             return table;
         }
 
+        // https://www.dotnetperls.com/sort-dictionary
+        public void SortMapByKey()
+        {
+            var dictionary = new Dictionary<string, int>();
+            dictionary.Add("car", 2);
+            dictionary.Add("zebra", 0);
+            dictionary.Add("apple", 1);
+
+            // Step 2: get keys and sort them.
+            var list = dictionary.Keys.ToList();
+            list.Sort();
+
+            // Step 3: loop through keys.
+            foreach (var key in list)
+            {
+                Console.WriteLine("{0}: {1}", key, dictionary[key]);
+            }
+        }
+
+        public void SortMapByVal(string scending = "ascending")
+        {
+            var dictionary = new Dictionary<string, int>(5);
+            dictionary.Add("cat", 1);
+            dictionary.Add("dog", 0);
+            dictionary.Add("mouse", 5);
+            dictionary.Add("eel", 3);
+            dictionary.Add("programmer", 2);
+
+            // Order by values.
+            // ... Use LINQ to specify sorting by value.
+            var items = scending == "ascending" ? from pair in dictionary
+                                                  orderby pair.Value ascending
+                                                  select pair :
+                                                from pair in dictionary
+                                                orderby pair.Value descending
+                                                select pair;
+
+            // Display results.
+            foreach (KeyValuePair<string, int> pair in items)
+            {
+                Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            }
+        }
+
         public static void Main(string[] args)
         {
-            Console.WriteLine("Jump Game");
+            Console.WriteLine("============");
+            int[,] arr = new int[5, 2];
+            var obj = new RotateMatrix();
+            obj.SortMapByKey();
+            Console.WriteLine("-------------");
+            obj.SortMapByVal();
+            Console.WriteLine("============");
         }
     }
 }
