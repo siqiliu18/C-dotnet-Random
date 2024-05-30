@@ -51,6 +51,36 @@
             return table;
         }
 
+        public int[,] FlipForwardDiagonal(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+            int[,] table = new int[rows, cols];
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    table[col, row] = matrix[row, col];
+                }
+            }
+            return table;
+        }
+
+        public int[,] FlipBackwardDiagonal(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+            int[,] table = new int[rows, cols];
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    table[cols - col - 1, rows - row - 1] = matrix[row, col];
+                }
+            }
+            return table;
+        }
+
         public static void Main(string[] args)
         {
             Console.WriteLine("Jump Game");
