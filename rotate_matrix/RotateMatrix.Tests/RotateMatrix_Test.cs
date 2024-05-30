@@ -111,4 +111,22 @@ public class RotateMatrixTest
         };
         Assert.Equal(expected, res);
     }
+
+    [Fact]
+    public void FlipDiagonal3()
+    {
+        var obj = new RotateMatrix();
+        int[][] matrix = new int[][] {
+            new int[3] {1,2,3},
+            new int[3] {4,5,6},
+            new int[3] {7,8,9},
+        };
+        var res = obj.FlipForwardDiagonal2(matrix);
+        var expected = new int[][] {
+            new int[3] {1,4,7},
+            new int[3] {2,5,8},
+            new int[3] {3,6,9},
+        };
+        Assert.Equal(expected, res);
+    }
 }

@@ -67,6 +67,28 @@ namespace MainNS
             return table;
         }
 
+        public int[][] FlipForwardDiagonal2(int[][] matrix)
+        {
+            int rows = matrix.Length;
+            int cols = matrix[0].Length;
+            // If we go by this way, we only init the rows in table.
+            int[][] table = new int[rows][];
+            // Then we need to init the array in each row. int[,] = new int[rowNum, colNum] init at the beginning.
+            for (int row = 0; row < rows; row++)
+            {
+                table[row] = new int[cols];
+            }
+
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    table[col][row] = matrix[row][col];
+                }
+            }
+            return table;
+        }
+
         public int[,] FlipBackwardDiagonal(int[,] matrix)
         {
             int rows = matrix.GetLength(0);
@@ -126,6 +148,25 @@ namespace MainNS
             }
         }
 
+        // https://stackoverflow.com/a/33742025/9954367
+        public void SortArrArr()
+        {
+            int[][] x = new int[4][];
+            x[0] = new int[] { 5, 2, 5 };
+            x[1] = new int[] { 6, 8, 3 };
+            x[2] = new int[] { 8, 9, 6 };
+            x[3] = new int[] { 8, 3, 6 };
+            var sorted = x.OrderBy(y => y[0]).ThenBy(y => y[1]);
+            foreach (var arr in sorted)
+            {
+                foreach (int num in arr)
+                {
+                    Console.Write(num + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
         public static void Main(string[] args)
         {
             Console.WriteLine("============");
@@ -135,6 +176,36 @@ namespace MainNS
             Console.WriteLine("-------------");
             obj.SortMapByVal();
             Console.WriteLine("============");
+            obj.SortArrArr();
+            Console.WriteLine("============");
+            int[,] testArr = new int[2, 2]; // init cells to 0
+            int rows = testArr.GetLength(0);
+            int cols = testArr.GetLength(1);
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    Console.Write(testArr[row, col] + " ");
+                }
+                Console.WriteLine();
+            }
+            int[][] copyArr = new int[rows][];
+            for (int row = 0; row < rows; row++)
+            {
+                copyArr[row] = new int[cols];
+                for (int col = 0; col < cols; col++)
+                {
+                    copyArr[row][col] = testArr[row, col] + 1;
+                }
+            }
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    Console.Write(copyArr[row][col] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
